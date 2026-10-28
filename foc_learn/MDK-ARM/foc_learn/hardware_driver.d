@@ -33,5 +33,8 @@ foc_learn\hardware_driver.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_us
 foc_learn\hardware_driver.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pcd_ex.h
 foc_learn\hardware_driver.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h
 foc_learn\hardware_driver.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h
+foc_learn\hardware_driver.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h
+foc_learn\hardware_driver.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h
 foc_learn\hardware_driver.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h
 foc_learn\hardware_driver.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h
+foc_learn\hardware_driver.o: ../Core/Inc/spi.h

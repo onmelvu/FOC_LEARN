@@ -54,7 +54,7 @@
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
-          <BrowseInformation>1</BrowseInformation>
+          <BrowseInformation>0</BrowseInformation>
           <ListingPath></ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
@@ -160,7 +160,7 @@
             <ldXref>1</ldXref>
             <BigEnd>0</BigEnd>
             <AdsALst>1</AdsALst>
-            <AdsACrf>1</AdsACrf>
+            <AdsACrf>0</AdsACrf>
             <AdsANop>0</AdsANop>
             <AdsANot>0</AdsANot>
             <AdsLLst>1</AdsLLst>
@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32G431xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;    ../USB_Device/App;    ../USB_Device/Target;    ../Drivers/STM32G4xx_HAL_Driver/Inc;    ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy;    ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;    ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc;    ../Drivers/CMSIS/Device/ST/STM32G4xx/Include;    ../Drivers/CMSIS/Include;    ..\User</IncludePath>
+              <IncludePath>../Core/Inc;       ../USB_Device/App;       ../USB_Device/Target;       ../Drivers/STM32G4xx_HAL_Driver/Inc;       ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy;       ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;       ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc;       ../Drivers/CMSIS/Device/ST/STM32G4xx/Include;       ../Drivers/CMSIS/Include;       ..\User</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -403,6 +403,11 @@
               <FileName>gpio.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Core/Src/spi.c</FilePath>
             </File>
             <File>
               <FileName>tim.c</FileName>
@@ -535,6 +540,16 @@
               <FilePath>../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c</FilePath>
             </File>
             <File>
+              <FileName>stm32g4xx_hal_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32g4xx_hal_spi_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32g4xx_hal_tim.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c</FilePath>
@@ -608,6 +623,11 @@
               <FileName>board_config.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\User\board_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>encoder.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\encoder.c</FilePath>
             </File>
           </Files>
         </Group>

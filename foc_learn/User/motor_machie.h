@@ -4,11 +4,13 @@
 #include "foc_algorithm.h"
 #include "hardware_driver.h"
 #include "board_config.h"
+#include "encoder.h"
 
 typedef struct
 {
     foc_typedef foc;
     vf_typedef vf;
+    encoder_typedef encoder;
 }motor_typedef;
 
 extern motor_typedef motor_system;;

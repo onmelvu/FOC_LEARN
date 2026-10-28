@@ -39,6 +39,8 @@ foc_learn\vofa.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usb.h
 foc_learn\vofa.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pcd_ex.h
 foc_learn\vofa.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h
 foc_learn\vofa.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h
+foc_learn\vofa.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h
+foc_learn\vofa.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h
 foc_learn\vofa.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h
 foc_learn\vofa.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h
 foc_learn\vofa.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h
@@ -49,3 +51,4 @@ foc_learn\vofa.o: ..\User\foc_algorithm.h
 foc_learn\vofa.o: D:\keil\keil\ARM\ARMCC\Bin\..\include\math.h
 foc_learn\vofa.o: ..\User\hardware_driver.h
 foc_learn\vofa.o: ..\User\board_config.h
+foc_learn\vofa.o: ..\User\encoder.h

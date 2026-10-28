@@ -31,8 +31,11 @@ foc_learn\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usb.h
 foc_learn\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pcd_ex.h
 foc_learn\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h
 foc_learn\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h
+foc_learn\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h
+foc_learn\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h
 foc_learn\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h
 foc_learn\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h
+foc_learn\main.o: ../Core/Inc/spi.h
 foc_learn\main.o: ../Core/Inc/tim.h
 foc_learn\main.o: ../USB_Device/App/usb_device.h
 foc_learn\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h
@@ -53,3 +56,4 @@ foc_learn\main.o: ..\User\board_config.h
 foc_learn\main.o: ..\User\foc_algorithm.h
 foc_learn\main.o: D:\keil\keil\ARM\ARMCC\Bin\..\include\math.h
 foc_learn\main.o: ..\User\motor_machie.h
+foc_learn\main.o: ..\User\encoder.h

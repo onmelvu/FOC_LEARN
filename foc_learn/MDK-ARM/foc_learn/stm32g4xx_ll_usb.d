@@ -30,5 +30,7 @@ foc_learn\stm32g4xx_ll_usb.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_u
 foc_learn\stm32g4xx_ll_usb.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pcd_ex.h
 foc_learn\stm32g4xx_ll_usb.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h
 foc_learn\stm32g4xx_ll_usb.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h
+foc_learn\stm32g4xx_ll_usb.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h
+foc_learn\stm32g4xx_ll_usb.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h
 foc_learn\stm32g4xx_ll_usb.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h
 foc_learn\stm32g4xx_ll_usb.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h

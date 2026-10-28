@@ -19,6 +19,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "spi.h"
 #include "tim.h"
 #include "usb_device.h"
 #include "gpio.h"
@@ -93,8 +94,8 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USB_Device_Init();
-  MX_TIM6_Init();
   MX_TIM1_Init();
+  MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
   motor_state_machie_init(&motor_system);
   

@@ -9,10 +9,16 @@ void motor_state_machie_init(motor_typedef *state)
     /* 设置电机母线和pwm周期 */
     set_udc_tpwm_param(&state->foc, UDC, TPWM);
     vf_speed_control_param_init(&state->vf, ACC, TARGET_SPEED, DEAD_ZONE, FOC_TS);
+
+    /* 初始化编码器 */
+    encoder_param_init(&state->encoder, ENCODER_LINE, 0);
 }
 
 void motor_state_machie_run(motor_typedef *state)
 {
+    uint16_t data = 0;
+    data = mt6701_read_data();
+    encoder_update(&state->encoder, data);
     /* foc 角度 */
     vf_speed_control_update(&state->vf, &state->foc.Theta);
 

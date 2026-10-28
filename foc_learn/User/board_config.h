@@ -14,6 +14,6 @@
 #define UDC     24.0f
 #define TPWM    4249.0f
 
-
+#define ENCODER_LINE    16383
 
 #endif
