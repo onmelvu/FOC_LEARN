@@ -40,7 +40,7 @@
 "foc_learn\motor_machie.o"
 "foc_learn\hardware_driver.o"
 "foc_learn\encoder.o"
---library_type=microlib --strict --scatter "foc_learn\foc_learn.sct"
+--strict --scatter "foc_learn\foc_learn.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "foc_learn.map" -o foc_learn\foc_learn.axf

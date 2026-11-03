@@ -11,11 +11,11 @@ void vofa_send_task(void)
     vofa_send.send_data_array[1] = motor_system.vf.theta;
     vofa_send.send_data_array[2] = motor_system.vf.speed;
     vofa_send.send_data_array[3] = motor_system.vf.target_speed;
-    vofa_send.send_data_array[4] = motor_system.foc.Vv;
+    vofa_send.send_data_array[4] = motor_system.encoder.dir;
     vofa_send.send_data_array[5] = motor_system.foc.Vw;
-    vofa_send.send_data_array[6] = motor_system.foc.Vu_Mod;
-    vofa_send.send_data_array[7] = motor_system.foc.Vv_Mod;
-    vofa_send.send_data_array[8] = motor_system.foc.Vw_Mod;
+    vofa_send.send_data_array[6] = motor_system.encoder.pulse_data;
+    vofa_send.send_data_array[7] = motor_system.encoder.theta;
+    vofa_send.send_data_array[8] = motor_system.encoder.theta_e;
 
     vofa_data_process();
 }

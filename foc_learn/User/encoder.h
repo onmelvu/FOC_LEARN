@@ -7,11 +7,17 @@
 typedef struct
 {
     uint32_t    line;           /* 编码器线数 */
+    uint8_t     motor_pn;       /* 电机极对数 */
     uint8_t     dir;            /* 编码器方向 */
+
+
     uint32_t    pulse_data;     /* 原始数据 */
+    uint32_t    pulse;          /* 编码器误差 */
+
     float       theta;          /* 机械角度 */
+    float       theta_e;        /* 电角度 */
 }encoder_typedef;
 
-void encoder_param_init(encoder_typedef *state, uint32_t line, uint8_t dir);
+void encoder_param_init(encoder_typedef *state, uint32_t line, uint8_t dir, uint8_t motor_pn, uint32_t pulse);
 void encoder_update(encoder_typedef *state, uint32_t data);
 #endif

@@ -336,9 +336,9 @@ ARM Macro Assembler    Page 6
   194 00000000                 IMPORT           SystemInit
   195 00000000                 IMPORT           __main
   196 00000000         
-  197 00000000 4806            LDR              R0, =SystemInit
+  197 00000000 4809            LDR              R0, =SystemInit
   198 00000002 4780            BLX              R0
-  199 00000004 4806            LDR              R0, =__main
+  199 00000004 4809            LDR              R0, =__main
   200 00000006 4700            BX               R0
   201 00000008                 ENDP
   202 00000008         
@@ -657,21 +657,32 @@ ARM Macro Assembler    Page 11
   399 0000001C         ;*******************************************************
                        ************************
   400 0000001C                 IF               :DEF:__MICROLIB
-  401 0000001C         
-  402 0000001C                 EXPORT           __initial_sp
-  403 0000001C                 EXPORT           __heap_base
-  404 0000001C                 EXPORT           __heap_limit
-  405 0000001C         
-  406 0000001C                 ELSE
-  421                          ENDIF
-  422 0000001C         
-  423 0000001C                 END
+  407 0000001C         
+  408 0000001C                 IMPORT           __use_two_region_memory
+  409 0000001C                 EXPORT           __user_initial_stackheap
+  410 0000001C         
+  411 0000001C         __user_initial_stackheap
+  412 0000001C         
+  413 0000001C 4804            LDR              R0, =  Heap_Mem
+  414 0000001E 4905            LDR              R1, =(Stack_Mem + Stack_Size)
+  415 00000020 4A05            LDR              R2, = (Heap_Mem +  Heap_Size)
+  416 00000022 4B06            LDR              R3, = Stack_Mem
+  417 00000024 4770            BX               LR
+  418 00000026         
+  419 00000026 00 00           ALIGN
+  420 00000028         
+  421 00000028                 ENDIF
+  422 00000028         
+  423 00000028                 END
               00000000 
+              00000000 
+              00000000 
+              00000400 
+              00000200 
               00000000 
 Command Line: --debug --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=interwo
 rk --depend=foc_learn\startup_stm32g431xx.d -ofoc_learn\startup_stm32g431xx.o -
 I.\RTE\_foc_learn -ID:\keil\packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include -ID:\keil\
 packs\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include --pred
-efine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 543" --predefine=
-"STM32G431xx SETA 1" --predefine="_RTE_ SETA 1" --list=startup_stm32g431xx.lst 
-startup_stm32g431xx.s
+efine="__UVISION_VERSION SETA 543" --predefine="STM32G431xx SETA 1" --predefine
+="_RTE_ SETA 1" --list=startup_stm32g431xx.lst startup_stm32g431xx.s

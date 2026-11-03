@@ -104,7 +104,7 @@ void vf_speed_control_update(vf_typedef *state, float *target_theta_add)
     state->speed_integrator += state->acc_dir * state->acc * state->ts;
 
     /* 速度积分得到角度 */
-    state->theta_integrator += state->speed * state->ts;
+    state->theta_integrator += state->speed_integrator * state->ts;
     /* 输出角度 */
     state->theta = fmod(state->theta_integrator, _2PI);
 

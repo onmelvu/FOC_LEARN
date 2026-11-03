@@ -6,11 +6,20 @@
 #include "board_config.h"
 #include "encoder.h"
 
+typedef enum
+{
+    THETA_MODE_ZERO = 0,    /* 固定零度  （定位） */
+    THETA_MODE_VF,          /* VF角度自增 */
+    THETA_MODE_ENCODER,     /* 编码器角度 */
+}motor_theta_mode_enum;
+
+
 typedef struct
 {
-    foc_typedef foc;
-    vf_typedef vf;
-    encoder_typedef encoder;
+    motor_theta_mode_enum   theta_mode;
+    foc_typedef             foc;
+    vf_typedef              vf;
+    encoder_typedef         encoder;
 }motor_typedef;
 
 extern motor_typedef motor_system;;
