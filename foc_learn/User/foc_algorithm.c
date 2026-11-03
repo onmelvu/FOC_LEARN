@@ -8,7 +8,7 @@
 void rev_park_transf(foc_typedef *state)
 {
     state->Valpha = state->Vd * cosf(state->Theta) - state->Vq * sinf(state->Theta);
-    state->Vbeta  = state->Vd * sinf(state->Theta) + state->Vq * cosf(state->Theta);
+    state->Vbeta  = state->Vd * sinf(state->Theta) + state->Vq * cos(state->Theta);
 }
 
 /**
@@ -37,9 +37,9 @@ void svpwm_zero_sq_inject(foc_typedef *state)
     state->Vw_Mod = v0 + state->Vw;
 
     /* 转换为三相pwm比较值 */
-    state->Tcmp1 = (state->Vu_Mod / state->Udc +0.5f) * state->Tpwm;
-    state->Tcmp2 = (state->Vv_Mod / state->Udc +0.5f) * state->Tpwm;
-    state->Tcmp3 = (state->Vw_Mod / state->Udc +0.5f) * state->Tpwm;
+    state->Tcmp1 = (((state->Vu_Mod) / state->Udc) + 0.5f) * state->Tpwm;
+    state->Tcmp2 = (((state->Vv_Mod) / state->Udc) + 0.5f) * state->Tpwm;
+    state->Tcmp3 = (((state->Vw_Mod) / state->Udc) + 0.5f) * state->Tpwm;
 
     
 }

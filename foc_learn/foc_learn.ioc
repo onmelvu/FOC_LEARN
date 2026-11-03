@@ -1,6 +1,6 @@
 #MicroXplorer Configuration settings - do not modify
 File.Version=6
-GPIO.groupedBy=
+GPIO.groupedBy=Group By Peripherals
 KeepUserPlacement=false
 Mcu.Family=STM32G4
 Mcu.IP0=NVIC
@@ -186,7 +186,7 @@ TIM1.Channel-PWM\ Generation4\ No\ Output=TIM_CHANNEL_4
 TIM1.CounterMode=TIM_COUNTERMODE_CENTERALIGNED1
 TIM1.IPParameters=Channel-PWM Generation1 CH1 CH1N,Channel-PWM Generation2 CH2 CH2N,Channel-PWM Generation3 CH3 CH3N,PeriodNoDither,CounterMode,Channel-PWM Generation4 No Output,PulseNoDither_4
 TIM1.PeriodNoDither=4249
-TIM1.PulseNoDither_4=4249
+TIM1.PulseNoDither_4=4245
 USB_DEVICE.CLASS_NAME_FS=CDC
 USB_DEVICE.IPParameters=VirtualMode,VirtualModeFS,CLASS_NAME_FS
 USB_DEVICE.VirtualMode=Cdc
